@@ -1,0 +1,142 @@
+/*Для работы со своими css стилями при создании
+сайта с помощью bootstrap в теге head добавляем тег link.css
+ниже и прописываем путь к папке стили
+Для работы с атрибутами скопированными из бутстрап
+просто печатаем названия из кода и работаем
+ничего не выдумывая */
+@import url('https://fonts.googleapis.com/css?family=Michroma&display=swap');
+
+/*С помощью такой записи меняем шрифт*/
+body {
+    font-family: Michroma, serif;
+    background: linear-gradient(159deg, #0A2090 0%, #060C50 39%, #05052E 100%);
+}
+
+p {
+    color: aquamarine;
+    text-decoration: none;
+}
+
+
+.nav-link {
+    color: aquamarine;
+}
+
+.navbar-nav .nav-link.active {
+    color: rgb(9, 10, 10);
+}
+
+.navbar-brand img {
+    width: 35px;
+}
+
+.navbar-toggler {
+    background-color: darkgrey;
+
+}
+
+
+.btn.btn-primary {
+    color: #000;
+    background-color: aquamarine;
+    box-shadow: 5px 5px 10px 1px #000;
+}
+
+.sidebar {
+    color: aquamarine;
+    background: linear-gradient(270deg, #04104c 0%, #0a1370 39%, #040429 100%);
+
+}
+
+.card {
+    color: aquamarine;
+    background: linear-gradient(270deg, #102172 0%, #0a1370 39%, #040429 100%);
+
+}
+
+.card a {
+    text-decoration: none;
+    color: rgb(23, 161, 115);
+}
+
+.text-slide {
+    font-family: Michroma, serif;
+    font-size: 150%;
+}
+
+.text-slide,
+.text-footer {
+    color: aqua;
+    margin: auto auto;
+
+    /*при таком синтаксисе
+    центруется положение объекта и по оси х
+    и по оси у*/
+
+
+}
+
+footer,
+.btn-outline-primary {
+    background: linear-gradient(270deg, #102172 0%, #0a1370 39%, #040429 100%);
+}
+
+.media-links {
+    display: flex;
+    /*горизонт дисплей*/
+    justify-content: center;
+    /*выравнив по горизонт*/
+    align-items: center;
+    /*выравнив по вертикали*/
+}
+
+.call-anime {
+    animation: myAnim 1s ease 0s infinite normal forwards;
+}
+
+/*myAnime это просто имя к которому обр.
+медиа запрос @keyframes,если 
+аниме много имя надо менять.Важно! если можно
+исп. css аним. лучше исп. её, а не JS аниме
+она меньше грузит сервер и сайт раб. быстрее.
+сайт webcode tools*/
+
+@keyframes myAnim {
+    0% {
+        transform: rotate(0);
+        transform-origin: top;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        transform-origin: top;
+    }
+}
+
+@media (max-width: 755px) {
+    .carousel-indicators {
+        display: none;
+        /*Убираем индикатор слайдов
+        на мобильниках или при ширине дисплея
+        меньше 755рх*/
+    }
+}
+
+.phone-anime {
+    animation: myAnime 1s ease 0s infinite normal forwards;
+
+}
+
+@keyframes myAnime {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/*сайт https://webcode.tools/ - анимация, видео, цвета!!!*/
